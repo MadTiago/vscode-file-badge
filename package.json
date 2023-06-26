@@ -2,12 +2,26 @@
   "name": "file-badge",
   "displayName": "File Badge",
   "description": "Tags files with a custom badge/text color on the right side of the filename",
+  "author": "MadTiago (https://github.com/MadTiago)",
+  "publisher": "MadTiago",
   "version": "0.0.1",
+  "icon": "assets/icon.png",
   "engines": {
     "vscode": "^1.79.0"
   },
+  "homepage": "https://github.com/MadTiago/vscode-file-badge/blob/main/README.md",
+  "bugs": {
+    "url": "https://github.com/MadTiago/vscode-file-badge/issues",
+    "email": "madtiago@live.com.pt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MadTiago/vscode-file-badge.git"
+  },
+  "license": "MIT",
   "categories": [
-    "Other"
+    "Other",
+    "Visualization"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
@@ -48,7 +62,7 @@
       "properties": {
         "fileBadge.badge": {
           "type": "string",
-          "default": "📌",
+          "default": "⭐",
           "description": "Specifies the badge to use for tagged files."
         },
         "fileBadge.tooltip": {
