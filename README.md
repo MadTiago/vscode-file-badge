@@ -13,6 +13,10 @@ This extension contributes the following settings:
 * `fileBadge.badge`: String containing the badge to show on tagged files.
 * `fileBadge.tooltip`: String containing the tooltip on tagged files.
 
+Theme color:
+
+* `fileBadge.treeItemTextForeground`: Color of the filename text when tagged
+
 ## Release Notes
 
 ### 0.0.1
