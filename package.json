@@ -4,7 +4,7 @@
     "description": "Tags files with a custom badge/text color on the right side of the filename",
     "author": "MadTiago (https://github.com/MadTiago)",
     "publisher": "MadTiago",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "icon": "assets/icon.png",
     "engines": {
         "vscode": "^1.95.0"
@@ -29,25 +29,52 @@
     "main": "./out/extension.js",
     "contributes": {
         "commands": [
-            {
-                "command": "file-badge.tagFile",
-                "title": "Toggle File Badge"
-            }
+            { "title": "⭐ Star", "command": "file-badge.tagFile.star" },
+            { "title": "🪲 Bug", "command": "file-badge.tagFile.bug" },
+            { "title": "🚀 Rocket", "command": "file-badge.tagFile.rocket" },
+            { "title": "🔨 Hammer", "command": "file-badge.tagFile.hammer" },
+            { "title": "🔥 Hot", "command": "file-badge.tagFile.hot" },
+            { "title": "✔️ Check", "command": "file-badge.tagFile.check" },
+            { "title": "❤️ Heart", "command": "file-badge.tagFile.heart" },
+            { "title": "🤯 Mind Blown", "command": "file-badge.tagFile.mindblown" },
+            { "title": "Remove all", "command": "file-badge.tagFile.removeAll" }
         ],
         "menus": {
             "explorer/context": [
                 {
-                    "command": "file-badge.tagFile",
+                    "submenu": "file-badge.tagFileMenu",
                     "group": "1_modification"
                 }
             ],
             "commandPalette": [
-                {
-                    "command": "file-badge.tagFile",
-                    "when": "false"
-                }
+                { "command": "file-badge.tagFile.star", "when": "false" },
+                { "command": "file-badge.tagFile.bug", "when": "false" },
+                { "command": "file-badge.tagFile.rocket", "when": "false" },
+                { "command": "file-badge.tagFile.hammer", "when": "false" },
+                { "command": "file-badge.tagFile.hot", "when": "false" },
+                { "command": "file-badge.tagFile.check", "when": "false" },
+                { "command": "file-badge.tagFile.heart", "when": "false" },
+                { "command": "file-badge.tagFile.mindblown", "when": "false" },
+                { "command": "file-badge.tagFile.removeAll", "when": "false" }
+            ],
+            "file-badge.tagFileMenu": [
+                { "command": "file-badge.tagFile.star", "group": "1_modification@1" },
+                { "command": "file-badge.tagFile.bug", "group": "1_modification@2" },
+                { "command": "file-badge.tagFile.rocket", "group": "1_modification@3" },
+                { "command": "file-badge.tagFile.hammer", "group": "1_modification@4" },
+                { "command": "file-badge.tagFile.hot", "group": "1_modification@5" },
+                { "command": "file-badge.tagFile.check", "group": "1_modification@6" },
+                { "command": "file-badge.tagFile.heart", "group": "1_modification@7" },
+                { "command": "file-badge.tagFile.mindblown", "group": "1_modification@8" },
+                { "command": "file-badge.tagFile.removeAll", "group": "5_other" }
             ]
         },
+        "submenus": [
+            {
+                "id": "file-badge.tagFileMenu",
+                "label": "Toggle File Badge"
+            }
+        ],
         "colors": [
             {
                 "id": "fileBadge.treeItemTextForeground",
@@ -81,7 +108,9 @@
         "watch": "tsc -watch -p ./",
         "pretest": "npm run compile && npm run lint",
         "lint": "eslint src --ext ts",
-        "test": "node ./out/test/runTest.js"
+        "test": "node ./out/test/runTest.js",
+        "package": "vsce package",
+        "publish": "vsce publish"
     },
     "devDependencies": {
         "@types/vscode": "^1.79.0",
