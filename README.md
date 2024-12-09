@@ -19,20 +19,8 @@ Theme color:
 
 -   `fileBadge.treeItemTextForeground`: Color of the filename text when tagged
 
-## Release Notes
+## Changelog
 
-### 0.1.0
-
-- New icons to select from `⭐🪲🚀🔨🔥✔️❤️🤯`
-- Option to remove all icons from all selected files.
-- Limit of 2 icons per file.
-
-### 0.0.2
-
-Badges now persist across sessions.
-
-### 0.0.1
-
-Initial version
+The changelog can be found in the [Changelog.md](./Changelog.md) file.
 
 **Enjoy!**
