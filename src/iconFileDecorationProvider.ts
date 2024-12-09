@@ -106,8 +106,8 @@ export class IconFileDecorationProvider implements FileDecorationProvider {
         // Get current workspace fileBadge state
         const fileBadgeState = this._context.workspaceState.get<Record<string, string[]>>(this._workspaceStateKey, {});
 
-        const objToMap = Object.entries(fileBadgeState);
         // Convert Object to Map and iterate over previous session state
+        const objToMap = Object.entries(fileBadgeState);
         objToMap.forEach(([fsPath, decorations]) => {
             if(Array.isArray(decorations)) {
                 decorations.forEach(iconName => {
