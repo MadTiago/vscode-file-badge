@@ -23,6 +23,7 @@ export class IconFileDecorationProvider implements FileDecorationProvider {
     private readonly _icons: Array<Icon>;
     // Map of current decorations <fsPath, array of icon names>
     private _decoratedFiles: Map<string, string[]> = new Map<string, string[]>();
+    private readonly _workspaceStateKey: string = "fileBadgeState";
 
     constructor(context: ExtensionContext, icons: Array<Icon>) {
         this.disposables = [];
@@ -98,18 +99,21 @@ export class IconFileDecorationProvider implements FileDecorationProvider {
         // Convert Map to plain object to save
         const serializedState = Object.fromEntries(this._decoratedFiles);
         // Save workspace state
-        this._context.workspaceState.update("fileBadgeState", serializedState);
+        this._context.workspaceState.update(this._workspaceStateKey, serializedState);
     }
 
     populatePreviousSessionState() {
         // Get current workspace fileBadge state
-        const fileBadgeState = this._context.workspaceState.get<Record<string, string[]>>("fileBadgeState", {});
+        const fileBadgeState = this._context.workspaceState.get<Record<string, string[]>>(this._workspaceStateKey, {});
 
+        const objToMap = Object.entries(fileBadgeState);
         // Convert Object to Map and iterate over previous session state
-        Object.entries(fileBadgeState).forEach(([fsPath, decorations]) => {
-            decorations.forEach(iconName => {
-                this.updateTreeFileDecoration(Uri.file(fsPath), iconName);
-            });
+        objToMap.forEach(([fsPath, decorations]) => {
+            if(Array.isArray(decorations)) {
+                decorations.forEach(iconName => {
+                    this.updateTreeFileDecoration(Uri.file(fsPath), iconName);
+                });
+            }
         });
     }
 

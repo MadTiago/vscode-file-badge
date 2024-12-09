@@ -1,9 +1,18 @@
-# Change Log
+# Changelog
 
-All notable changes to the "file-badge" extension will be documented in this file.
+### 0.1.1
+- Fix workspace state for older versions
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+### 0.1.0
 
-## [Unreleased]
+- New icons to select from `⭐🪲🚀🔨🔥✔️❤️🤯`
+- Option to remove all icons from all selected files.
+- Limit of 2 icons per file.
 
-- Initial release
+### 0.0.2
+
+- Badges now persist across sessions.
+
+### 0.0.1
+
+- Initial version

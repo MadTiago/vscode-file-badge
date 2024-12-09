@@ -4,7 +4,7 @@
     "description": "Tags files with a custom badge/text color on the right side of the filename",
     "author": "MadTiago (https://github.com/MadTiago)",
     "publisher": "MadTiago",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "icon": "assets/icon.png",
     "engines": {
         "vscode": "^1.95.0"
@@ -89,11 +89,6 @@
         "configuration": {
             "title": "FileBadge",
             "properties": {
-                "fileBadge.badge": {
-                    "type": "string",
-                    "default": "⭐",
-                    "description": "Specifies the badge to use for tagged files."
-                },
                 "fileBadge.tooltip": {
                     "type": "string",
                     "default": "Tagged",
