@@ -21,6 +21,6 @@ Theme color:
 
 ## Changelog
 
-The changelog can be found in the [Changelog.md](./Changelog.md) file.
+The changelog can be found in the [CHANGELOG.md](./CHANGELOG.md) file.
 
 **Enjoy!**
