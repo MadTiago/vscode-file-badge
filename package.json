@@ -4,7 +4,7 @@
     "description": "Tags files with a custom badge/text color on the right side of the filename",
     "author": "MadTiago (https://github.com/MadTiago)",
     "publisher": "MadTiago",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "icon": "assets/icon.png",
     "engines": {
         "vscode": "^1.95.0"

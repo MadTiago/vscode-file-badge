@@ -117,6 +117,10 @@ export class IconFileDecorationProvider implements FileDecorationProvider {
         });
     }
 
+    getCurrentUriDecorations(resourceUri: Uri): string[] | undefined {
+        return this._decoratedFiles.get(resourceUri.fsPath);
+    }
+
     dispose() {
         this.disposables.forEach((d) => d.dispose());
     }

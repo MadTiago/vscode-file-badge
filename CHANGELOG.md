@@ -1,5 +1,8 @@
 # Changelog
 
+### 0.1.2
+- Fix session state for renamed/moved/deleted files
+
 ### 0.1.1
 - Fix workspace state for older versions
 
