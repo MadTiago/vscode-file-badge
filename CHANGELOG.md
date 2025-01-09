@@ -1,5 +1,8 @@
 # Changelog
 
+### 0.1.3
+- Added `🚩🎨💬👀`
+
 ### 0.1.2
 - Fix session state for renamed/moved/deleted files
 
