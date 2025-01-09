@@ -10,6 +10,10 @@ export function activate(context: ExtensionContext) {
         { name: "hammer", icon: "🔨", command: "file-badge.tagFile.hammer" },
         { name: "hot", icon: "🔥", command: "file-badge.tagFile.hot" },
         { name: "check", icon: "✔️", command: "file-badge.tagFile.check" },
+        { name: "flag", icon: "🚩", command: "file-badge.tagFile.flag" },
+        { name: "palette", icon: "🎨", command: "file-badge.tagFile.palette" },
+        { name: "text", icon: "💬", command: "file-badge.tagFile.text" },
+        { name: "eyes", icon: "👀", command: "file-badge.tagFile.eyes" },
         { name: "heart", icon: "❤️", command: "file-badge.tagFile.heart" },
         { name: "mindblown", icon: "🤯", command: "file-badge.tagFile.mindblown" },
     ];

@@ -4,7 +4,7 @@
     "description": "Tags files with a custom badge/text color on the right side of the filename",
     "author": "MadTiago (https://github.com/MadTiago)",
     "publisher": "MadTiago",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "icon": "assets/icon.png",
     "engines": {
         "vscode": "^1.95.0"
@@ -35,6 +35,10 @@
             { "title": "🔨 Hammer", "command": "file-badge.tagFile.hammer" },
             { "title": "🔥 Hot", "command": "file-badge.tagFile.hot" },
             { "title": "✔️ Check", "command": "file-badge.tagFile.check" },
+            { "title": "🚩 Flag", "command": "file-badge.tagFile.flag" },
+            { "title": "🎨 Palette", "command": "file-badge.tagFile.palette" },
+            { "title": "💬 Text", "command": "file-badge.tagFile.text" },
+            { "title": "👀 Eyes", "command": "file-badge.tagFile.eyes" },
             { "title": "❤️ Heart", "command": "file-badge.tagFile.heart" },
             { "title": "🤯 Mind Blown", "command": "file-badge.tagFile.mindblown" },
             { "title": "Remove all", "command": "file-badge.tagFile.removeAll" }
@@ -53,6 +57,10 @@
                 { "command": "file-badge.tagFile.hammer", "when": "false" },
                 { "command": "file-badge.tagFile.hot", "when": "false" },
                 { "command": "file-badge.tagFile.check", "when": "false" },
+                { "command": "file-badge.tagFile.flag", "when": "false" },
+                { "command": "file-badge.tagFile.palette", "when": "false" },
+                { "command": "file-badge.tagFile.text", "when": "false" },
+                { "command": "file-badge.tagFile.eyes", "when": "false" },
                 { "command": "file-badge.tagFile.heart", "when": "false" },
                 { "command": "file-badge.tagFile.mindblown", "when": "false" },
                 { "command": "file-badge.tagFile.removeAll", "when": "false" }
@@ -64,8 +72,12 @@
                 { "command": "file-badge.tagFile.hammer", "group": "1_modification@4" },
                 { "command": "file-badge.tagFile.hot", "group": "1_modification@5" },
                 { "command": "file-badge.tagFile.check", "group": "1_modification@6" },
-                { "command": "file-badge.tagFile.heart", "group": "1_modification@7" },
-                { "command": "file-badge.tagFile.mindblown", "group": "1_modification@8" },
+                { "command": "file-badge.tagFile.flag", "group": "1_modification@7" },
+                { "command": "file-badge.tagFile.palette", "group": "1_modification@8" },
+                { "command": "file-badge.tagFile.text", "group": "1_modification@9" },
+                { "command": "file-badge.tagFile.eyes", "group": "1_modification@10" },
+                { "command": "file-badge.tagFile.heart", "group": "1_modification@11" },
+                { "command": "file-badge.tagFile.mindblown", "group": "1_modification@12" },
                 { "command": "file-badge.tagFile.removeAll", "group": "5_other" }
             ]
         },
